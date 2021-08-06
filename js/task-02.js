@@ -10,6 +10,7 @@ const ingredients = [
 
 //find list in httml doc
 let list = document.querySelector('#ingredients');
+
 //create array from ingredients array  
 const listItems = ingredients.map(ingredient => {
   //create li element
