@@ -20,7 +20,7 @@ const changeBorderColor = () => {
     return;
   }
   input.classList.add("invalid");
-  console.log(input.classList);
+  // console.log(input.classList);
 };
 
 // console.log(input.classList);

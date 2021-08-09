@@ -13,5 +13,3 @@ categoryChildList.forEach((item) => {
   let categorySubCount = item.querySelector("ul").childElementCount;
   console.log(`Количество элементов: ${categorySubCount}`);
 });
-// const arr = ['1', '2', '3'];
-// arr.forEach(element => { console.log(element)})
