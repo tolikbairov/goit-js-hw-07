@@ -33,11 +33,11 @@ const createBoxes = (amount, boxes) => {
   if (elementLast) {
     width = parseInt(elementLast.style.width);
     height = parseInt(elementLast.style.height);
-    console.log(width);
-    console.log(height);
+    // console.log(width);
+    // console.log(height);
   }
 
-  console.log(elementLast);
+  // console.log(elementLast);
   for (let i = 0; i < amount; i += 1) {
     width += 10;
     height += 10;
