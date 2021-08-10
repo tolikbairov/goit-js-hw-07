@@ -4,8 +4,8 @@ const spanOutput = document.querySelector("#name-output");
 //Получаем значение input
 const getInput = () => input.value;
 //Изменяем значение output
-const setInput = () => {
-  const newInput = getInput();
+const setOutput = (newInput) => {
+  // const newInput = getInput();
   if (newInput.length === 0 || !newInput.trim()) {
     spanOutput.textContent = "незнакомец";
     return;
@@ -28,4 +28,6 @@ const setInput = () => {
 
 // inputObj.setInput.bind(inputObj)
 /////
-input.addEventListener("input", setInput);
+input.addEventListener("input", () => {
+  setOutput(getInput());
+});

@@ -7,16 +7,14 @@ const changeBorderColor = () => {
   //Соответствует ли необходимое кол-во символов введенным
   if (Number(input.getAttribute("data-length")) === input.value.length) {
     //если содержит класс  invalid заменяет его на valid
-    if (input.classList.contains("invalid")) {
-      input.classList.replace("invalid", "valid");
+    if (input.classList.replace("invalid", "valid")) {
       return;
     }
     input.classList.add("valid");
     return;
   }
   //если содержит класс  valid заменяет его на invalid
-  if (input.classList.contains("valid")) {
-    input.classList.replace("valid", "invalid");
+  if (input.classList.replace("valid", "invalid")) {
     return;
   }
   input.classList.add("invalid");
