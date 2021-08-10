@@ -25,13 +25,18 @@ gallery.classList.add("photo-list");
 // });
 
 //gallery.append(...listItems);
-let listItems = images.map(({ url, alt }) => {
-  // let li = document.createElement("li");
-  // li.classList.add("photo-item");
-  let liString = `<li class ="photo-item"><img src="${url}" alt="${alt}" ></li>`;
-  // li.insertAdjacentHTML("afterbegin", imgString);
 
-  return liString;
-});
+// let listItems = images.map(({ url, alt }) => {
+//   // let li = document.createElement("li");
+//   // li.classList.add("photo-item");
+//   let liString = `<li class ="photo-item"><img src="${url}" alt="${alt}" ></li>`;
+//   // li.insertAdjacentHTML("afterbegin", imgString);
+
+//   return liString;
+// });
 // const listItemsString = listItems.join("");
-gallery.insertAdjacentHTML("afterbegin", listItems.join(""));
+let listItemsString = "";
+images.forEach(({ url, alt }) => {
+  listItemsString += `<li class ="photo-item"><img src="${url}" alt="${alt}" ></li>`;
+});
+gallery.insertAdjacentHTML("afterbegin", listItemsString);
