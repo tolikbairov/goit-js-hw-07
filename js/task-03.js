@@ -15,12 +15,23 @@ const images = [
 ];
 const gallery = document.querySelector("#gallery");
 gallery.classList.add("photo-list");
-let listItems = images.map(({ url, alt }) => {
-  let li = document.createElement("li");
-  li.classList.add("photo-item");
-  let imgString = `<img src="${url}" alt="${alt}" >`;
-  li.insertAdjacentHTML("afterbegin", imgString);
+// let listItems = images.map(({ url, alt }) => {
+//   let li = document.createElement("li");
+//   li.classList.add("photo-item");
+//   let imgString = `<img src="${url}" alt="${alt}" >`;
+//   li.insertAdjacentHTML("afterbegin", imgString);
 
-  return li;
+//   return li;
+// });
+
+//gallery.append(...listItems);
+let listItems = images.map(({ url, alt }) => {
+  // let li = document.createElement("li");
+  // li.classList.add("photo-item");
+  let liString = `<li class ="photo-item"><img src="${url}" alt="${alt}" ></li>`;
+  // li.insertAdjacentHTML("afterbegin", imgString);
+
+  return liString;
 });
-gallery.append(...listItems);
+// const listItemsString = listItems.join("");
+gallery.insertAdjacentHTML("afterbegin", listItems.join(""));
